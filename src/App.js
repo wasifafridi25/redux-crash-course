@@ -6,7 +6,7 @@ function App() {
   return (
     <div>
       <Counter />
-      {/* <Counter2 /> */}
+      <Counter2 />
     </div>
   );
 }
