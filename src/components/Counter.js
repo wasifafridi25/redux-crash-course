@@ -3,6 +3,7 @@ import { useSelector } from 'react-redux'
 import { useDispatch } from 'react-redux'
 import { increment } from '../redux/counterSlice'
 import { decrement } from '../redux/counterSlice'
+import { useGetAllPostsQuery, useGetPostsByIdQuery } from '../redux/postsSlice'
 
 export default function Counter() {
   // const count = useSelector(state => {
@@ -18,8 +19,14 @@ export default function Counter() {
   
   const dispatch = useDispatch();
 
+  console.log(useGetAllPostsQuery)
+  // const { data, isLoading, isError } = useGetAllPostsQuery()
+  const { data, isLoading, isError } = useGetPostsByIdQuery(5)
+
   return (
     <div>
+      {/* {JSON.stringify(data)} */}
+      {JSON.stringify(data)}
       <h1>The count is: {count}</h1>
       <button onClick={() => dispatch(increment())}>Increment</button>
       <button onClick={() => dispatch(decrement())}>Decrement</button>

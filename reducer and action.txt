@@ -1,0 +1,8 @@
+An action describes how you want to change the state, so to change the state we need to dispatch an action.
+An action is used to change the state.
+
+A reducer is a function that takes in the state and an action, and returns the new state. 
+
+So, the redux store, it's an object that's immutable, you can't change it, it's read only. 
+So, in order to chang it you need to have a new object and that's the job of the reducer. So, it changes the store
+to give us the new state. 

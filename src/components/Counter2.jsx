@@ -15,7 +15,7 @@ export default function Counter2({}) {
       <button onClick={() => dispatch(increment())}>Increment</button>
       <button onClick={() => dispatch(decrement())}>Decrement</button>
       {/*payload is the amount you are sending along with the action which is incrementByAmount */}
-      {/* we are we are dispatching the incrementByAmount action and sending payload which is 20/amount */}
+      {/* we are dispatching the incrementByAmount action and sending payload which is 20/amount */}
       <button onClick={() => dispatch(incrementByAmount(amount))}>Increment by {amount}</button>
     </div>
   )
